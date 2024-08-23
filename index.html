@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <ul class="main">
+          <li>
+            <span id="Role"> Login </span>
+            <ul id="dropDown">
+              <a href="/admin">
+                <li>Admin</li>
+              </a>
+              <a href="/user">
+                <li>User</li>
+              </a>
+            </ul>
+          </li>
+        </ul>
+      </header>
+    </div>
+    <script>
+      let Role = document.getElementById("Role");
+      let dropDown = document.getElementById("dropDown");
+
+      window.addEventListener("click", (e) => {
+        if (Role.contains(e.target)) {
+          dropDown.classList.toggle("active");
+        } else {
+          dropDown.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
